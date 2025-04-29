@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="container">
+        <h1><span class="icon">⚙️</span> Accessibility Settings</h1>
+        
+        <div class="settings-section">
+            <h2><span class="icon">🔊</span> Voice Settings</h2>
+            <div class="setting-group">
+                <label>Speech Rate: <span id="speech-rate-value">Normal</span></label>
+                <div class="button-group">
+                    <button class="rate-btn" data-rate="slow">Slow</button>
+                    <button class="rate-btn active" data-rate="normal">Normal</button>
+                    <button class="rate-btn" data-rate="fast">Fast</button>
+                </div>
+            </div>
+            <div class="setting-group">
+                <label>Voice</label>
+                <select id="voice-select">
+                    <option value="">Select a voice</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <h2><span class="icon">📳</span> Haptic Feedback</h2>
+            <div class="setting-group">
+                <div class="toggle-group">
+                    <label>Vibration Feedback</label>
+                    <label class="switch">
+                        <input type="checkbox" id="vibration-toggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="setting-group">
+                <label>Vibration Intensity: <span id="vibration-intensity-value">Medium</span></label>
+                <div class="button-group">
+                    <button class="intensity-btn" data-intensity="low">Low</button>
+                    <button class="intensity-btn active" data-intensity="medium">Medium</button>
+                    <button class="intensity-btn" data-intensity="high">High</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="voice-commands-section">
+            <h2>Voice Commands</h2>
+            <ul>
+                <li>Say "<span class="command">speed slow</span>" or "<span class="command">speed fast</span>" to change speech rate</li>
+                <li>Say "<span class="command">vibration on</span>" or "<span class="command">vibration off</span>" to toggle haptic feedback</li>
+                <li>Say "<span class="command">vibration high</span>" or "<span class="command">vibration low</span>" to adjust intensity</li>
+                <li>Say "<span class="command">save</span>" to save your settings</li>
+            </ul>
+        </div>
+
+        <button id="save-settings" class="save-btn">
+            <span class="icon">💾</span> Save Settings
+        </button>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="cover.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="nav-icon">🎮</span>
+            <span>Games</span>
+        </a>
+        <a href="#" class="nav-item active">
+            <span class="nav-icon">⚙️</span>
+            <span>Settings</span>
+        </a>
+    </nav>
+    <script src="settings.js"></script>
+</body>
+</html> 

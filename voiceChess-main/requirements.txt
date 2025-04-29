@@ -1,0 +1,9 @@
+chess==1.9.4
+python-chess==1.999.0
+SpeechRecognition==3.10.0
+pygame==2.5.2
+numpy==1.24.3
+requests==2.31.0
+cairosvg==2.7.1
+svglib==1.5.1
+reportlab==4.1.0 

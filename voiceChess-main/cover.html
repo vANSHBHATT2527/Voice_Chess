@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose a Game</title>
+    <link rel="stylesheet" href="cover.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Choose a Game</h1>
+        <div class="game-selection">
+            <div class="game-card">
+                <div class="game-icon">♟</div>
+                <h2>Chess</h2>
+                <p>Voice-controlled chess game with accessible board</p>
+                <button onclick="window.location.href='index.html'" class="play-btn">Play Chess</button>
+            </div>
+            <div class="game-card">
+                <div class="game-icon">🎴</div>
+                <h2>Memory</h2>
+                <p>Matching card game with voice commands</p>
+                <button class="play-btn">Play Memory</button>
+            </div>
+        </div>
+        <div class="voice-commands">
+            <h3>Voice Commands</h3>
+            <ul>
+                <li>Say <span class="command">"Chess"</span> to play chess</li>
+                <li>Say <span class="command">"Memory"</span> to play memory card game</li>
+                <li>Say <span class="command">"Home"</span> or <span class="command">"Back"</span> to return to home</li>
+            </ul>
+        </div>
+    </div>
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="nav-icon">🎮</span>
+            <span>Games</span>
+        </a>
+        <a href="settings.html" class="nav-item">
+            <span class="nav-icon">⚙️</span>
+            <span>Settings</span>
+        </a>
+    </nav>
+    <script src="cover.js"></script>
+</body>
+</html> 
