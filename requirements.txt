@@ -1,0 +1,7 @@
+python-chess
+streamlit
+#use the below if you are running in local machine 
+#SpeechRecognition
+#pyttsx3
+#pyaudio
+

@@ -1,38 +1,97 @@
-🎙️ Voice-Controlled Chess
+# ♟️ Voice Chess
 
-A voice-activated chess game for enthusiasts who want to play hands-free using speech commands. This project integrates Python, Flask, speech recognition, and a browser-based chessboard to let users make moves through voice input. It's designed for developers, students, or hobbyists interested in combining artificial intelligence, web development, and game logic in an interactive way. 🚀 Deployment Steps (Localhost)
+Voice Chess is an accessibility-focused chess application that supports both
+**voice-based gameplay (CLI)** and a **visual desktop interface (GUI)**.
 
-Follow these steps to set up and run the Voice Chess project from GitHub:
+The project demonstrates speech recognition, game logic, desktop UI design,
+and robust system design by separating voice and GUI modes for stability.
 
-📥 Clone the Repository
-Open a terminal or command prompt and run:
+---
 
-bash Copy Edit git clone https://github.com/vANSHBHATT2527/Voice_Chess.git cd Voice_Chess 2. 🐍 Set Up a Virtual Environment (Recommended) This keeps your dependencies isolated:
+## 🚀 Features
 
-bash Copy Edit
+### 🎤 Voice Chess (CLI Mode)
+- Play chess using voice commands
+- Text fallback when voice input is unavailable
+- Legal move validation using `python-chess`
+- Audio feedback using text-to-speech
+- Designed for accessibility
 
-For Windows
-python -m venv venv venv\Scripts\activate
+### ♟️ Visual Chess (GUI Mode)
+- Desktop GUI using Tkinter
+- Live chess board with Unicode pieces
+- Computer opponent (random legal moves)
+- Last-move highlighting
+- Move history panel
+- Stable, non-blocking interface
 
-For macOS/Linux
-python3 -m venv venv source venv/bin/activate 3. 📦 Install Python Dependencies Install all required packages:
+---
 
-bash Copy Edit pip install -r requirements.txt If requirements.txt is missing or incomplete, install manually:
+## 🧠 Tech Stack
+- Python
+- python-chess
+- SpeechRecognition
+- PyAudio
+- pyttsx3
+- Tkinter (standard library)
 
-bash Copy Edit pip install flask speechrecognition pyaudio python-chess ⚠️ Note: On some systems, you may need to install PyAudio using system-level tools. For Windows, use a wheel from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
+---
 
-▶️ Run the Flask App
-Start the voice-controlled chess server:
+## 📁 Project Structure
+voice-chess/
+├── mainV.py # Voice Chess (CLI mode)
+├── mainG.py # Visual Chess (GUI mode)
+├── chess_engine.py # Core chess logic
+├── speech_input.py # Speech recognition
+├── speech_output.py # Text-to-speech
+├── requirements.txt
+└── README.md
 
-bash Copy Edit python chess_game.py You should see output like:
 
-csharp Copy Edit
+---
 
-Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-🌐 Open in Browser
-Go to your browser and visit:
+## ▶️ How to Run
 
-arduino Copy Edit http://localhost:5000 You’ll see the web-based chessboard UI where you can begin interacting via voice commands.
+### 1️⃣ Create and activate virtual environment
+```bash
+python -m venv venv
+venv\Scripts\activate    # Windows
+2️⃣ Install dependencies
+pip install -r requirements.txt
+🎤 Run Voice Chess (CLI)
+python mainV.py
+    Speak commands like:
+    move from e two to e four
+    reset
+    exit
+If voice is not detected, you can type moves like:
+    e2e4
 
-🧠 Give Microphone Access
-Make sure your browser and system allow microphone access, as voice commands rely on it.
+♟️ Run Visual Chess (GUI)
+python mainG.py
+
+
+Click Play Move
+
+Enter moves in terminal (e.g. e2e4)
+
+See your move and computer move on the board
+🧩 Design Decision (Important)
+
+Voice input is implemented in CLI mode only.
+The GUI version intentionally avoids microphone access to prevent thread-safety
+issues on Windows with PyAudio and Tkinter.
+
+🔮 Future Improvements
+    Smarter AI (Stockfish)
+    Full voice support using browser-based speech APIs
+    Undo / restart functionality
+    Improved UI styling
+
+## ⚙️ Installation & Setup
+
+```bash
+git clone https://github.com/your-username/voice-chess.git
+cd voice-chess
+pip install -r requirements.txt
+python main.py
